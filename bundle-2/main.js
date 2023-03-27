@@ -11,10 +11,19 @@
 
 
 // ESERCIZIO 1
-for (let i = 0; i > 5; i++) {
+
+// SBAGLIATO
+// for (let i = 0; i > 5; i++) {
+//     console.log(i);
+// }
+
+// CORRETTO
+for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
+// 1. il for loop stampa gli indici da 1 a 5
+// 2. l'errore è "i > 5", poiché il loop va da 0 a 4 e quindi "i < 5"
 
 // ESERCIZIO 2
 function addIfEven(num) {
