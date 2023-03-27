@@ -50,11 +50,24 @@ console.log(number);
 // 3. il numero ritornato dalla funzione va salvato in una variabile e mostrato in console
 
 // // ESERCIZIO 3
+// SBAGLIATO
 // function loopToFive() {
 //     for (let i = 0, i < 5, i++) {
 //         console.log(i);
 //     }
 // }
+
+// CORRETTO
+function loopToFive() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
+loopToFive();
+
+// 1. la funzione stampa in console gli indici da 0 a 4 del for loop
+// 2. al posto delle virgole, all'interno del for dobbiamo inserire dei punto e virgola
+// 3. la funzione deve essere richiamata per mostrare il risultato in console
 
 
 // // ESERCIZIO 4 (suggerimento: ci sono 8 errori)
