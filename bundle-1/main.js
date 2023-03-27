@@ -26,20 +26,20 @@
 // checkAge();
 
 // CORRETTO
-// const myAge = 32;
-// const ageResult = checkAge();
-// console.log(ageResult);
+const myAge = 32;
+const ageResult = checkAge();
+console.log(ageResult);
 
-// function checkAge() {
-//     let message = '';
+function checkAge() {
+    let message = '';
 
-//     if (myAge < 18) {
-//         message = `Sei troppo giovane! Hai ${myAge} anni!`;
-//     } else {
-//         message = 'Hai più di 18 anni!';
-//     }
-//     return message;
-// }
+    if (myAge < 18) {
+        message = `Sei troppo giovane! Hai ${myAge} anni!`;
+    } else {
+        message = 'Hai più di 18 anni!';
+    }
+    return message;
+}
 
 // 1. Il codice controlla l'età, se è minore di 18 allora 'Sei minorenne', altrimenti se è maggiore di 18 allora 'sei maggiorenne'
 // 2. & 3. (ERRORE 1) la costante "myAge" deve essere dichiarata fuori dalla funzione, altrimenti può essere vista solo all'interno di essa
@@ -71,6 +71,8 @@ function printColorsNumber() {
 // (ERRORE 3) la stringa ritornata dalla funzione va salvata in una variabile che poi sarà mostrata con un "console.log"
 
 // // ESERCIZIO 3
+
+// SBAGLIATO
 // function addNumbers() {
 //     const userNumber = prompt('Inserisci un numero');
 //     const total = userNumber + 12;
@@ -79,6 +81,20 @@ function printColorsNumber() {
 // }
 // addNumbers();
 
+// CORRETTO
+const userNumber = parseInt(prompt('Inserisci un numero'));
+const result = addNumbers();
+console.log(result);
+ 
+function addNumbers() {
+    const total = userNumber + 12;
+    return `Il risultato finale è ${total}`;
+}
+
+// 1. la funzione somma un numero inserito dall'utente tramite il prompt e 12
+// 2. & 3. (ERRORE 1) prompt deve essere inserito in parseInt perchè prompt ritorna una stringa, mentre a noi serve un numero
+// (ERRORE 2) la funzione deve ritornare una stringa con return
+// (ERRORE 3) la stringa va salvata in una variabile da mostrare su console con "console.log"
 
 // // ESERCIZIO 4
 // function checkAccess() {
