@@ -71,6 +71,7 @@ loopToFive();
 
 
 // // ESERCIZIO 4 (suggerimento: ci sono 8 errori)
+// SBAGLIATO
 // function displayEvenNumbers() {
 //     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 //     let evenNumbers = [];
@@ -82,3 +83,27 @@ loopToFive();
 //     }
 // }
 // displayEvenNumbers(); // [2,4,6,8]
+
+// CORRETTO
+function displayEvenNumbers() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i]);
+        }
+    }
+    return evenNumbers;
+}
+const result = displayEvenNumbers(); // [2,4,6,8]
+console.log(result);
+
+// 1. la funzione mette nell'array evenNumbers i numeri pari e ritorna l'array
+// 2. (ERRORE 1) non occorre il ; alla fine del for loop
+// (ERRORE 2) non occorre il ; alla fine della condizione dell'if
+// (ERRORE 3) non occorre aggiungere -1 al numbers.length all'interno del for loop
+// (ERRORE 4) nella condizione dell'if occorre inserire numbers[i] il quale è il numero dell'array numbers nella posizione i
+// (ERRORE 5) nell'array evenNumbers bisogna pushare numbers[i], ossia l'eventuale numero pari, e non l'indice i
+// (ERRORE 6) il return va fuori dal for loop
+// (ERRROE 7) all'interno della condizione dell'if per confrontare i due numeri occorre mettere === (identità), e non = (assegnazione)
+// (ERRORE 8) per stampare il risultato dobbiamo inserire l'array all'interno di una variabile e poi utilizzare console.log
