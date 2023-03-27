@@ -97,6 +97,8 @@ function addNumbers() {
 // (ERRORE 3) la stringa va salvata in una variabile da mostrare su console con "console.log"
 
 // // ESERCIZIO 4
+
+// SBAGLIATO 
 // function checkAccess() {
 //     const addresses = [
 //         'mymail@mail.com',
@@ -119,3 +121,30 @@ function addNumbers() {
 //     }
 // }
 // checkAccess();
+
+// CORRETTO
+function checkAccess() {
+    const addresses = [
+        'mymail@mail.com',
+        'yourmail@mail.com',
+        'hermail@mail.com',
+        'hismail@mail.com',
+    ];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = false;
+
+    if (addresses.includes(userEmail)) {
+        grantAccess = true;
+    }
+
+    if (grantAccess === true) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
+
+// 1. la funzione controlla se l'email inserita dall'utente è presente all'interno dell'array adresses
+// 2. a grantAccess sono assegnate due stringhe, poichè sono tra virgolette, mentre a noi servono due valori booleani, ossia true e false SENZA virgolette
